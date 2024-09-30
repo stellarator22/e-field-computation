@@ -1,6 +1,6 @@
 """
 Author: Kuba Anglin
-Date: 9/25/2024
+Date: 9/30/2024
 
 Massachusetts Institute of Technology
 Department of Nuclear Science and Engineering
@@ -594,11 +594,11 @@ def create_animated_video(parameter, start_value, end_value, step, frame_rate,
     original_field_lines_visible = field_lines_visible
 
     # Create a new figure for the animation without interfering with the main GUI
-    anim_fig = Figure(figsize=(8, 8), dpi=200, facecolor='white')  # Set facecolor to white
+    anim_fig = Figure(figsize=(8, 8), dpi=200, facecolor='white')
     anim_ax = anim_fig.add_subplot(111)
     anim_ax.set_axis_off()
-    anim_ax.set_facecolor('white')  # Set axis facecolor to white
-    anim_ax.set_position([0, 0, 1, 1])  # Adjust axis position to fill the figure
+    anim_ax.set_facecolor('white')
+    anim_ax.set_position([0, 0, 1, 1])
 
     # Create a canvas
     canvas = FigureCanvas(anim_fig)
@@ -673,11 +673,11 @@ def create_animated_video(parameter, start_value, end_value, step, frame_rate,
                     alpha, beta, height, ui_grid_fixed, vi_grid_fixed, interpolation, blur_amount
                 )
 
-                # --- Create Frame Without Field Lines ---
+                # Create frame without field lines
                 anim_ax.clear()
                 anim_ax.set_axis_off()
-                anim_ax.set_facecolor('white')  # Reset axis facecolor to white
-                anim_ax.set_position([0, 0, 1, 1])  # Reset axis position to fill the figure
+                anim_ax.set_facecolor('white')
+                anim_ax.set_position([0, 0, 1, 1])
 
                 # Plot the image
                 anim_ax.imshow(
@@ -695,7 +695,7 @@ def create_animated_video(parameter, start_value, end_value, step, frame_rate,
                 canvas.draw()
                 writer_without_field_lines.grab_frame()
 
-                # --- Create Frame With Field Lines ---
+                # Create frame with field lines
                 if E_u_interp is not None and E_v_interp is not None:
                     # Overlay field lines
                     anim_ax.streamplot(
@@ -773,11 +773,11 @@ def create_animated_video(parameter, start_value, end_value, step, frame_rate,
                     alpha, beta, height, ui_grid_fixed, vi_grid_fixed, interpolation, blur_amount
                 )
 
-                # --- Create Frame Without Field Lines ---
+                # Create frame without field lines
                 anim_ax.clear()
                 anim_ax.set_axis_off()
-                anim_ax.set_facecolor('white')  # Reset axis facecolor to white
-                anim_ax.set_position([0, 0, 1, 1])  # Reset axis position to fill the figure
+                anim_ax.set_facecolor('white')
+                anim_ax.set_position([0, 0, 1, 1]) 
 
                 # Plot the image
                 anim_ax.imshow(
@@ -982,7 +982,7 @@ def open_video_settings(event):
                 # Check if video creation is complete
                 if progress >= 100:
                     # Close the video window after a short delay
-                    video_window.is_closing = True  # Set the closing flag
+                    video_window.is_closing = True
                     video_window.after(1000, video_window.destroy)
                     return  # Stop the update loop
         except queue.Empty:
@@ -1033,8 +1033,6 @@ def open_video_settings(event):
 
     tk.Button(video_window, text="Create Video", command=start_video_creation).grid(row=7, column=0, columnspan=2)
 
-    # Start the GUI update loop
-    # update_progress_bar()
 
     # Add protocol handler for window close event
     def on_window_close():
@@ -1498,8 +1496,8 @@ def load_previous_computation(event):
             else:
                 num_rings = 13  # Default to 13 rings
             # Set default values
-            cathode_radius = 4.572  # Default value or adjust as needed
-            anode_radius = 22.86  # Default value or adjust as needed
+            cathode_radius = 4.572
+            anode_radius = 22.86
             computation_radius = cathode_radius * 2
             view_radius = cathode_radius * 1.5
             # Set computation parameters to None
