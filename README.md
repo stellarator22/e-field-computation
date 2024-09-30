@@ -88,7 +88,7 @@ Adjusting Viewing Parameters
 
 Animation and Media Creation
 
--Create Media:
+Create Media:
 
   -Click on the Create Media button to open the media settings window.
   
@@ -103,7 +103,7 @@ Animation and Media Creation
   -Include Field Lines: Choose whether to include electric field lines in the animation.
   
   
--Capture Cross-Section:
+Capture Cross-Section:
 
   -Click on Capture Cross-Section to save the current 2D cross-sectional image.
   
