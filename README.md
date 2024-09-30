@@ -1,10 +1,14 @@
 Electric Field Visualization and Computation Tool
+
 Author: Kuba Anglin
+
 Date: September 30, 2024
 
 
 Massachusetts Institute of Technology
+
 Department of Nuclear Science and Engineering
+
 Plasma Science and Fusion Center
 
 
@@ -126,7 +130,11 @@ Contact
 For any questions or issues, please contact:
 
 Kuba Anglin
+
 Massachusetts Institute of Technology
+
 Department of Nuclear Science and Engineering
+
 Plasma Science and Fusion Center
+
 Email: kubaa@mit.edu
