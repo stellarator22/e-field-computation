@@ -113,10 +113,6 @@ Animation and Media Creation
 
 --------------------------------------------------
 
-Create Media:
-
---------------------
-
   -Click on the Create Media button to open the media settings window.
   
   -Parameter to Sweep: Choose which parameter (Alpha, Beta, Height) to vary in the animation.
@@ -128,12 +124,6 @@ Create Media:
   -Frame Rate (fps): Set the frame rate for the animation.
   
   -Include Field Lines: Choose whether to include electric field lines in the animation.
-
---------------------
-  
-Capture Cross-Section:
-
---------------------
 
   -Click on Capture Cross-Section to save the current 2D cross-sectional image.
 
@@ -151,11 +141,7 @@ Notes
 
 --------------------------------------------------
 
-License
-
---------------------------------------------------
-
-MIT Licence
+License: MIT Licence
 
 --------------------------------------------------
 
