@@ -78,7 +78,6 @@ from matplotlib import MatplotlibDeprecationWarning
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
-# Suppress the specific deprecation warning
 warnings.filterwarnings("ignore", category=MatplotlibDeprecationWarning)
 
 mplstyle.use('dark_background')
