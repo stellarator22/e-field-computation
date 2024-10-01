@@ -1,6 +1,6 @@
-Electric Field Visualization and Computation Tool
-
 --------------------------------------------------
+
+Electric Field Visualization and Computation Tool
 
 --------------------------------------------------
 
@@ -31,25 +31,25 @@ Features
 
 --------------------------------------------------
 
--Calculate the electric potential and field for different cathode configurations (1, 2, 3, or 13 rings).
+- Calculate the electric potential and field for different cathode configurations (1, 2, 3, or 13 rings).
 
--Visualize cross-sectional slices of the electric field magnitude.
+- Visualize cross-sectional slices of the electric field magnitude.
 
--Interactive 3D visualization of the cathode rings and the cross-sectional plane.
+- Interactive 3D visualization of the cathode rings and the cross-sectional plane.
 
 - Adjust viewing parameters (Alpha, Beta, Height) using sliders and buttons.
 
--Option to display electric field lines on the 2D plot with adjustable density.
+- Option to display electric field lines on the 2D plot with adjustable density.
 
--Load previously saved computation data or save current data for future use.
+- Load previously saved computation data or save current data for future use.
 
--Create animated videos sweeping through parameters with customizable settings.
+- Create animated videos sweeping through parameters with customizable settings.
 
--Capture and save the current cross-section image.
+- Capture and save the current cross-section image.
 
--Adjust Gaussian blur and scale coefficient for enhanced visualization.
+- Adjust Gaussian blur and scale coefficient for enhanced visualization.
 
--View computation details such as iteration count, computation time, and parameters.
+- View computation details such as iteration count, computation time, and parameters.
 
 --------------------------------------------------
 
@@ -57,19 +57,19 @@ Dependencies
 
 --------------------------------------------------
 
--Python 3.x
+- Python 3.x
 
--NumPy
+- NumPy
 
--CuPy (for GPU acceleration) (optional; the script can be modified to use NumPy only)
+- CuPy (for GPU acceleration) (optional; the script can be modified to use NumPy only)
 
--Matplotlib
+- Matplotlib
 
--SciPy
+- SciPy
 
--tkinter (for file dialogs and GUI elements)
+- tkinter (for file dialogs and GUI elements)
 
--threading, queue (for video creation progress tracking)
+- threading, queue (for video creation progress tracking)
 
 --------------------------------------------------
 
@@ -77,17 +77,17 @@ Main Interface
 
 --------------------------------------------------
 
--Cathode Configuration: Select the number of cathode rings (1, 2, 3, or 13) to start the computation.
+- Cathode Configuration: Select the number of cathode rings (1, 2, 3, or 13) to start the computation.
 
--Interpolation Mode: Choose the interpolation method for visualizing the electric field slice (Nearest, Linear, Cubic).
+- Interpolation Mode: Choose the interpolation method for visualizing the electric field slice (Nearest, Linear, Cubic).
 
--Load Computation Data: Load previously saved computation data.
+- Load Computation Data: Load previously saved computation data.
 
--Save Computation Data: Save the current computation data for future use.
+- Save Computation Data: Save the current computation data for future use.
 
--Show/Hide Field Lines: Toggle the display of electric field lines on the 2D plot.
+- Show/Hide Field Lines: Toggle the display of electric field lines on the 2D plot.
 
--Create Media: Open settings to create animated videos or capture the current cross-section image.
+- Create Media: Open settings to create animated videos or capture the current cross-section image.
 
 --------------------------------------------------
 
@@ -95,17 +95,17 @@ Adjusting Viewing Parameters
 
 --------------------------------------------------
 
--α (Alpha): Adjust the angle α (in degrees) to rotate the cross-sectional plane.
+- α (Alpha): Adjust the angle α (in degrees) to rotate the cross-sectional plane.
 
--β (Beta): Adjust the angle β (in degrees) to tilt the cross-sectional plane.
+- β (Beta): Adjust the angle β (in degrees) to tilt the cross-sectional plane.
 
--Height: Adjust the height (in cm) of the cross-sectional plane.
+- Height: Adjust the height (in cm) of the cross-sectional plane.
 
--Scale Coefficient: Adjust the gamma coefficient for scaling the electric field visualization.
+- Scale Coefficient: Adjust the gamma coefficient for scaling the electric field visualization.
 
--Field Line Density: Adjust the density of the electric field lines on the 2D plot.
+- Field Line Density: Adjust the density of the electric field lines on the 2D plot.
 
--Gaussian Blur: Adjust the amount of Gaussian blur applied to the electric field visualization.
+- Gaussian Blur: Adjust the amount of Gaussian blur applied to the electric field visualization.
 
 --------------------------------------------------
 
@@ -113,19 +113,19 @@ Animation and Media Creation
 
 --------------------------------------------------
 
--Click on the Create Media button to open the media settings window.
+- Click on the Create Media button to open the media settings window.
   
--Parameter to Sweep: Choose which parameter (Alpha, Beta, Height) to vary in the animation.
+- Parameter to Sweep: Choose which parameter (Alpha, Beta, Height) to vary in the animation.
   
--Start Value / End Value: Set the range for the parameter sweep.
+- Start Value / End Value: Set the range for the parameter sweep.
   
--Increment Step: Set the increment step for each frame.
+- Increment Step: Set the increment step for each frame.
   
--Frame Rate (fps): Set the frame rate for the animation.
+- Frame Rate (fps): Set the frame rate for the animation.
   
--Include Field Lines: Choose whether to include electric field lines in the animation.
+- Include Field Lines: Choose whether to include electric field lines in the animation.
 
--Click on Capture Cross-Section to save the current 2D cross-sectional image.
+- Click on Capture Cross-Section to save the current 2D cross-sectional image.
 
 --------------------------------------------------
 
@@ -133,13 +133,13 @@ Notes
 
 --------------------------------------------------
 
--The GUI is designed to fit a 1440p display at 100% scaling. If using a 1080p display, you may have change your scaling factor to see all GUI elements.
+- The GUI is designed to fit a 1440p display at 100% scaling. If using a 1080p display, you may have change your scaling factor to see all GUI elements.
 
--The computation of the electric potential and field can be computationally intensive. Ensure your system meets the requirements.
+- The computation of the electric potential and field can be computationally intensive. Ensure your system meets the requirements.
 
--The script uses CuPy for GPU acceleration. If a compatible GPU is not available, you can modify the script to use NumPy instead by replacing CuPy arrays with NumPy arrays.
+- The script uses CuPy for GPU acceleration. If a compatible GPU is not available, you can modify the script to use NumPy instead by replacing CuPy arrays with NumPy arrays.
 
--Computation data is saved in NumPy .npy format. Loading and saving data can help avoid recomputation.
+- Computation data is saved in NumPy .npy format. Loading and saving data can help avoid recomputation.
 
 --------------------------------------------------
 
