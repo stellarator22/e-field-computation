@@ -31,25 +31,25 @@ Features
 
 --------------------------------------------------
 
--Compute Electric Potential and Field: Calculate the electric potential and field for different cathode configurations (1, 2, 3, or 13 rings).
+-Calculate the electric potential and field for different cathode configurations (1, 2, 3, or 13 rings).
 
--2D Cross-Section Visualization: Visualize cross-sectional slices of the electric field magnitude.
+-Visualize cross-sectional slices of the electric field magnitude.
 
--3D Visualization: Interactive 3D visualization of the cathode rings and the cross-sectional plane.
+-Interactive 3D visualization of the cathode rings and the cross-sectional plane.
 
--Interactive Controls: Adjust viewing parameters (Alpha, Beta, Height) using sliders and buttons.
+- Adjust viewing parameters (Alpha, Beta, Height) using sliders and buttons.
 
--Electric Field Lines: Option to display electric field lines on the 2D plot with adjustable density.
+-Option to display electric field lines on the 2D plot with adjustable density.
 
--Load/Save Computation Data: Load previously saved computation data or save current data for future use.
+-Load previously saved computation data or save current data for future use.
 
--Media Creation: Create animated videos sweeping through parameters with customizable settings.
+-Create animated videos sweeping through parameters with customizable settings.
 
--Capture Cross-Section: Capture and save the current cross-section image.
+-Capture and save the current cross-section image.
 
--Visualization Adjustments: Adjust Gaussian blur and scale coefficient for enhanced visualization.
+-Adjust Gaussian blur and scale coefficient for enhanced visualization.
 
--Simulation Summary: View computation details such as iteration count, computation time, and parameters.
+-View computation details such as iteration count, computation time, and parameters.
 
 --------------------------------------------------
 
@@ -113,19 +113,19 @@ Animation and Media Creation
 
 --------------------------------------------------
 
-  -Click on the Create Media button to open the media settings window.
+-Click on the Create Media button to open the media settings window.
   
-  -Parameter to Sweep: Choose which parameter (Alpha, Beta, Height) to vary in the animation.
+-Parameter to Sweep: Choose which parameter (Alpha, Beta, Height) to vary in the animation.
   
-  -Start Value / End Value: Set the range for the parameter sweep.
+-Start Value / End Value: Set the range for the parameter sweep.
   
-  -Increment Step: Set the increment step for each frame.
+-Increment Step: Set the increment step for each frame.
   
-  -Frame Rate (fps): Set the frame rate for the animation.
+-Frame Rate (fps): Set the frame rate for the animation.
   
-  -Include Field Lines: Choose whether to include electric field lines in the animation.
+-Include Field Lines: Choose whether to include electric field lines in the animation.
 
-  -Click on Capture Cross-Section to save the current 2D cross-sectional image.
+-Click on Capture Cross-Section to save the current 2D cross-sectional image.
 
 --------------------------------------------------
 
