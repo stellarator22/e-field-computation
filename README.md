@@ -147,18 +147,6 @@ License: MIT Licence
 
 --------------------------------------------------
 
-Contact
+Contact: kubaa@mit.edu
 
 --------------------------------------------------
-
-For any questions or issues, please contact:
-
-Kuba Anglin
-
-Massachusetts Institute of Technology
-
-Department of Nuclear Science and Engineering
-
-Plasma Science and Fusion Center
-
-kubaa@mit.edu
