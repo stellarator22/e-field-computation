@@ -133,11 +133,13 @@ Notes
 
 --------------------------------------------------
 
--Performance: The computation of the electric potential and field can be computationally intensive. Ensure your system meets the requirements.
+-The GUI is designed to fit a 1440p display at 100% scaling. If using a 1080p display, you may have change your scaling factor to see all GUI elements.
 
--GPU Acceleration: The script uses CuPy for GPU acceleration. If a compatible GPU is not available, you can modify the script to use NumPy instead by replacing CuPy arrays with NumPy arrays.
+-The computation of the electric potential and field can be computationally intensive. Ensure your system meets the requirements.
 
--Data Saving: Computation data is saved in NumPy .npy format. Loading and saving data can help avoid recomputation.
+-The script uses CuPy for GPU acceleration. If a compatible GPU is not available, you can modify the script to use NumPy instead by replacing CuPy arrays with NumPy arrays.
+
+-Computation data is saved in NumPy .npy format. Loading and saving data can help avoid recomputation.
 
 --------------------------------------------------
 
