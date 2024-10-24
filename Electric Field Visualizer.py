@@ -355,7 +355,7 @@ def get_slice(E_magnitude_norm, X, Y, Z, alpha, beta, height, max_grid_spacing, 
         Ez_cpu = cp.asnumpy(Ez)
     else:
         Ez_cpu = Ez
-    points_on_plane_cpu = points_on_plane  # Already a NumPy array
+    points_on_plane_cpu = points_on_plane 
     # Interpolate Ex, Ey, Ez at points_on_plane
     Ex_interp = RegularGridInterpolator((x_cpu, y_cpu, z_cpu), Ex_cpu, bounds_error=False, fill_value=0.0)
     Ey_interp = RegularGridInterpolator((x_cpu, y_cpu, z_cpu), Ey_cpu, bounds_error=False, fill_value=0.0)
@@ -425,7 +425,6 @@ plt.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.95, wspace=0.3, hs
 
 ax_2d = fig.add_subplot(gs[0, 0])
 
-# Placeholder image
 placeholder_image = np.zeros((grid_size, grid_size))
 im = ax_2d.imshow(
     placeholder_image,
@@ -447,7 +446,6 @@ cbar.ax.yaxis.set_tick_params(color='white')
 plt.setp(cbar.ax.axes, facecolor='#303030')
 cbar.ax.yaxis.label.set_color('white')
 
-# Create bottom_gs in gs[1, 0]
 bottom_gs = GridSpecFromSubplotSpec(1, 1, subplot_spec=gs[1, 0], wspace=0.3)
 ax_summary = fig.add_subplot(bottom_gs[0, 0])
 
@@ -459,11 +457,9 @@ for spine in ax_summary.spines.values():
     spine.set_color('white')
 ax_summary.set_title('Simulation Summary', color='white', fontsize=12)
 
-# Adjust the position and width of ax_summary to make it less wide
 pos = ax_summary.get_position()
 ax_summary.set_position([pos.x0 + pos.width * 0.25, pos.y0, pos.width * 0.5, pos.height])
 
-# Initialize summary text with "Simulation not yet performed."
 summary_text = ax_summary.text(
     0.05, 0.95, 'Simulation not yet performed or loaded', ha='left', va='top',
     transform=ax_summary.transAxes, wrap=True, fontsize=12, color='white', fontfamily='monospace'
@@ -473,7 +469,6 @@ summary_text = ax_summary.text(
 # Add Widgets
 # ---------------------------
 
-# Adjust the control grid to accommodate the new button
 control_gs = GridSpecFromSubplotSpec(8, 1, subplot_spec=gs[:, 1:], hspace=0.5, height_ratios=[1,1,1,1,1,1,1,2])
 
 ax_cathode_config = fig.add_subplot(control_gs[0, 0])
@@ -505,13 +500,11 @@ ax_fieldline_button.set_facecolor('#404040')
 fieldline_button = Button(ax_fieldline_button, 'Show Field Lines', color='#404040', hovercolor='#505050')
 fieldline_button.label.set_color('white')
 
-# Add the GIF creation button
 ax_gif_button = fig.add_subplot(control_gs[5, 0])
 ax_gif_button.set_facecolor('#404040')
 gif_button = Button(ax_gif_button, 'Create Media', color='#404040', hovercolor='#505050')
 gif_button.label.set_color('white')
 
-# Adjust positions if necessary
 for ax in [ax_cathode_config, ax_interpolation, ax_load_button, ax_save_button, ax_fieldline_button, ax_gif_button]:
     box = ax.get_position()
     ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
@@ -925,14 +918,14 @@ def open_video_settings(event):
 
     # Add Capture Cross-Section button
     def capture_current_cross_section():
-        global field_line_density, field_line_width  # Ensure these variables are accessible
+        global field_line_density, field_line_width
 
         # Create a new figure with higher resolution
         cross_section_fig = Figure(figsize=(8, 8), dpi=300, facecolor='white')
         cross_section_ax = cross_section_fig.add_subplot(111)
         cross_section_ax.set_axis_off()
         cross_section_ax.set_facecolor('white')
-        cross_section_ax.set_position([0, 0, 1, 1])  # Adjust axis position to fill the figure
+        cross_section_ax.set_position([0, 0, 1, 1])
 
         # Copy the image data without axes or labels
         cross_section_ax.imshow(
@@ -948,7 +941,6 @@ def open_video_settings(event):
 
         # Plot field lines if they are visible
         if field_lines_visible and field_line_artist is not None:
-            # Ensure necessary variables are accessible
             if hasattr(update_plot, 'ui_fixed') and hasattr(update_plot, 'vi_fixed') and \
                     hasattr(update_plot, 'E_u_interp') and hasattr(update_plot, 'E_v_interp'):
                 # Plot field lines
@@ -960,7 +952,6 @@ def open_video_settings(event):
                     arrowsize=1
                 )
 
-                # Remove arrowheads if not desired
                 for art in cross_section_ax.get_children():
                     if isinstance(art, patches.FancyArrowPatch):
                         art.remove()
@@ -981,13 +972,13 @@ def open_video_settings(event):
 
     # Add Progress Bar
     progress_var = tk.DoubleVar()
-    video_window.progress_var = progress_var  # Attach progress_var to video_window
+    video_window.progress_var = progress_var
     progress_bar = ttk.Progressbar(video_window, variable=progress_var, maximum=100)
     progress_bar.grid(row=8, column=0, columnspan=2, sticky='we')
 
     # Add Estimated Time Remaining Label
     time_remaining_var = tk.StringVar()
-    video_window.time_remaining_var = time_remaining_var  # Attach to video_window
+    video_window.time_remaining_var = time_remaining_var
     time_remaining_label = tk.Label(video_window, textvariable=time_remaining_var)
     time_remaining_label.grid(row=9, column=0, columnspan=2, sticky='we')
 
@@ -1012,9 +1003,9 @@ def open_video_settings(event):
                 # Check if video creation is complete
                 if progress >= 100:
                     # Close the video window after a short delay
-                    video_window.is_closing = True  # Set the closing flag
+                    video_window.is_closing = True
                     video_window.after(1000, video_window.destroy)
-                    return  # Stop the update loop
+                    return
         except queue.Empty:
             pass
         except tk.TclError:
@@ -1063,12 +1054,10 @@ def open_video_settings(event):
 
     tk.Button(video_window, text="Create Video", command=start_video_creation).grid(row=7, column=0, columnspan=2)
 
-    # Start the GUI update loop
-    # update_progress_bar()
 
     # Add protocol handler for window close event
     def on_window_close():
-        video_window.is_closing = True  # Set the closing flag
+        video_window.is_closing = True
         # Cancel any pending callbacks
         if hasattr(video_window, 'after_id'):
             video_window.after_cancel(video_window.after_id)
